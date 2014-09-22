@@ -1,7 +1,7 @@
 module PassengerHolder
 
      def initialize
-          @passengers ||= []
+      @passengers ||= []
      end
 
      def accept(passenger)
