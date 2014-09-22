@@ -26,6 +26,7 @@ end
 
 def touch_out(station)
 	@station = nil
+	charge(2)
 end
 
 end

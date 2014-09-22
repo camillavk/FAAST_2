@@ -34,4 +34,10 @@ let (:station) { double :station }
 		expect(lambda{passenger2.touch_in(station)}).to raise_error"You do not have sufficient funds"
 	end
 
+	it "should have charge passenger on touch out" do
+		passenger.touch_in(station)
+		passenger.touch_out(station)
+		expect(passenger.balance).to eq(18)
+	end
+
 end
