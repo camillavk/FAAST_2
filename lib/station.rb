@@ -26,4 +26,8 @@ class Station
 		end
 	end
 
+	def balance_check(passenger)
+		passenger.balance
+	end
+
 end
