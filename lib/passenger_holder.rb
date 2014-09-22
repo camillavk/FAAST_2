@@ -1,7 +1,14 @@
 module PassengerHolder
 
-     def initialize
+	DEFAULT_CAPACITY = 40
+
+     def initialize(options = {})
+     	@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
       @passengers ||= []
+     end
+
+     def capacity
+     	@capacity
      end
 
      def accept(passenger)
@@ -14,6 +21,10 @@ module PassengerHolder
 
      def passenger_count
         @passengers.count
+     end
+
+     def full?
+     	raise "Sorry, it's full" if passenger_count == capacity
      end
 
 end
