@@ -5,6 +5,11 @@ describe Passenger do
 let (:passenger) {Passenger.new}
 let (:station) { double :station }
 
+	it "should allow account balance to be set on initialize" do
+		passenger = Passenger.new(:balance => 15)
+		expect(passenger.balance).to eq(15)
+	end
+
 	it "should be able to touch in at a station" do
   	passenger.touch_in(station)
 		expect(passenger.in_station?).to eq(true)
@@ -16,6 +21,6 @@ let (:station) { double :station }
 		expect(passenger.in_station?).to eq(false)
 	end
 
-	
+
 
 end

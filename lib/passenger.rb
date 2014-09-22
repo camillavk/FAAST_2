@@ -1,5 +1,12 @@
 class Passenger
 
+	DEFAULT_BALANCE = 20
+	attr_accessor :balance
+
+def initialize(options = {})
+	@balance = options.fetch(:balance, DEFAULT_BALANCE)
+end
+
 def in_station?
 	!@station.nil?
 end

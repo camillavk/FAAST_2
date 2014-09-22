@@ -15,7 +15,7 @@ module PassengerHolder
         @passengers << passenger
      end
 
-     def release(passenger)
+     def release(passenger = nil)
      		@passengers.delete(passenger)
      	end
 
