@@ -13,4 +13,9 @@ let(:passenger) {double :passenger}
           expect{holder.accept(passenger)}.to change{holder.passenger_count}.by 1
      end
 
+     it "should release passengers" do
+     			holder.accept(passenger)
+     			expect{holder.release(passenger)}.to change{holder.passenger_count}.by -1
+     end
+
 end
