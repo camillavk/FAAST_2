@@ -10,6 +10,10 @@ let (:station) { double :station }
 		expect(passenger.balance).to eq(15)
 	end
 
+	it "should be able to be charged and reduce balance" do
+		expect(passenger.charge).to eq(18)
+	end
+
 	it "should be able to touch in at a station" do
   	passenger.touch_in(station)
 		expect(passenger.in_station?).to eq(true)

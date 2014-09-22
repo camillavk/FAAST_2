@@ -7,6 +7,10 @@ def initialize(options = {})
 	@balance = options.fetch(:balance, DEFAULT_BALANCE)
 end
 
+def charge
+	@balance -= 2
+end
+
 def in_station?
 	!@station.nil?
 end
