@@ -16,4 +16,6 @@ let (:station) { double :station }
 		expect(passenger.in_station?).to eq(false)
 	end
 
+	
+
 end

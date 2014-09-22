@@ -1,7 +1,5 @@
 class Passenger
 
-	include PassengerHolder
-
 def in_station?
 	!@station.nil?
 end
