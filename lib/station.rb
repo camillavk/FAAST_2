@@ -14,4 +14,8 @@ class Station
 		@trains.count 
 	end
 
+	def undock(train)
+		@trains.delete(train)
+	end
+
 end
