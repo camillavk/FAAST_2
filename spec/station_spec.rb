@@ -1,4 +1,5 @@
 require 'station'
+require 'passenger_holder'
 
 describe Station do 
 
@@ -16,7 +17,7 @@ let (:train) {double :train}
 		expect{station.undock(train)}.to change{station.train_count}.by -1
 	end
 
-	it "should transfer carriages from one station to another" do
+	it "should transfer trains from one station to another" do
 		origin = Station.new
 		destination = Station.new
 		origin.dock(train)
