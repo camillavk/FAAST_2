@@ -21,4 +21,6 @@ class Train
 		raise "Cannot take more carriages" if carriage_count == DEFAULT_CAPACITY
 	end
 
+	
+
 end

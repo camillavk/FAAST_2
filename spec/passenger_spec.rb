@@ -29,4 +29,9 @@ let (:station) { double :station }
 		expect(passenger.in_station?).to eq(false)
 	end
 
+	it "should be rejected if balance is below 2GBP" do
+		passenger2 = Passenger.new(:balance => 1)
+		expect(lambda{passenger2.touch_in(station)}).to raise_error"You do not have sufficient funds"
+	end
+
 end
