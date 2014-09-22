@@ -11,7 +11,11 @@ let (:station) { double :station }
 	end
 
 	it "should be able to be charged and reduce balance" do
-		expect(passenger.charge).to eq(18)
+		expect(passenger.charge(2)).to eq(18)
+	end
+
+	it "should be able to topup balance" do
+		expect(passenger.topup(2)).to eq(22)
 	end
 
 	it "should be able to touch in at a station" do
@@ -24,7 +28,5 @@ let (:station) { double :station }
 		passenger.touch_out(station)
 		expect(passenger.in_station?).to eq(false)
 	end
-
-
 
 end
