@@ -10,4 +10,10 @@ let (:station) { double :station }
 		expect(passenger.in_station?).to eq(true)
 	end
 
+	it "should be able to touch out of a station" do
+		passenger.touch_in(station)
+		passenger.touch_out(station)
+		expect(passenger.in_station?).to eq(false)
+	end
+
 end
