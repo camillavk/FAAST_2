@@ -18,4 +18,10 @@ class Station
 		@trains.delete(train)
 	end
 
+	def transfer(station)
+		@trains.each do |train|
+			station.dock(undock(train))
+		end
+	end
+
 end
