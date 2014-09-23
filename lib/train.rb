@@ -6,7 +6,6 @@ class Train
 	def initialize(options = {})
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
 		@carriages = []
-		# options.fetch(:num_carriages, DEFAULT_CARRIAGES).times {dock(Carriage.new)}
 	end
 
 	def dock(carriage)

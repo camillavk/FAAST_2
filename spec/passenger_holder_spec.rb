@@ -4,8 +4,6 @@ class Holder
   include PassengerHolder
 end
 
-# shared_examples "a PassengerHolder" do 
-
 describe PassengerHolder do
 
 let(:holder) { Holder.new }
