@@ -1,0 +1,5 @@
+require './lib/station.rb'
+require './lib/carriage.rb'
+require './lib/train.rb'
+require './lib/passenger.rb'
+require './lib/passenger_holder.rb'
