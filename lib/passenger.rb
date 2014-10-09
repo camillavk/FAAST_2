@@ -20,8 +20,8 @@ def in_station?
 end
 
 def touch_in(station)
-	@station = station
 	raise "You do not have sufficient funds" if balance < 2
+	@station = station
 end
 
 def touch_out(station)

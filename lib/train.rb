@@ -2,6 +2,7 @@ class Train
 
 	DEFAULT_CAPACITY = 5
 	DEFAULT_CARRIAGES = 1
+	attr_reader :capacity
 
 	def initialize(options = {})
 		@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
@@ -9,6 +10,7 @@ class Train
 	end
 
 	def dock(carriage)
+		raise "Cannot take more carriages" if full?
 		@carriages << carriage
 	end
 
@@ -16,10 +18,11 @@ class Train
 		@carriages.count 
 	end
 
-	def full?
-		raise "Cannot take more carriages" if carriage_count == DEFAULT_CAPACITY
-	end
-
 	
+private
+
+	def full?
+		carriage_count == DEFAULT_CAPACITY
+	end
 
 end

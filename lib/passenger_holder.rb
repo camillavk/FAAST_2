@@ -1,14 +1,11 @@
 module PassengerHolder
 
 	DEFAULT_CAPACITY = 40
+    attr_reader :capacity
 
      def initialize(options = {})
      	@capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
       @passengers ||= []
-     end
-
-     def capacity
-     	@capacity
      end
 
      def accept(passenger)
@@ -16,8 +13,8 @@ module PassengerHolder
      end
 
      def release(passenger = nil)
-     		@passengers.delete(passenger)
-     	end
+     	@passengers.delete(passenger)
+     end
 
      def passenger_count
         @passengers.count

@@ -10,7 +10,7 @@ let(:holder) { Holder.new }
 let(:passenger) {double :passenger}
 
  		def fill_holder(passenger)
-     	40.times {holder.accept(passenger)}
+     	holder.capacity.times {holder.accept(passenger)}
     end
 
     it "should accept passengers" do
