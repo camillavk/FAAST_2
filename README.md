@@ -1,4 +1,11 @@
-Scenario:
+Faast System
+=======================
+
+## Synopsis
+
+This is the challange for the first week of Makers Academy.
+
+# Scenario:
 
 Create a tube system to be deployed into the undergound. The FAAST system needs to cater for the following;
 - There will be a number of trains inside the system
@@ -18,3 +25,7 @@ There are four objects within this system, the Passenger(s), carriages, train an
 * Carriage rejects Passenger if it is already at its capacity (40 Passengers)
 
 * The passenger is charged 2GBP when they touch out of a station (unless the station specifies a different amount to charge the passenger)
+
+## Technologies Used
+
+Ruby, Rspec
